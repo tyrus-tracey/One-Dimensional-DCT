@@ -13,10 +13,11 @@ transformMatrix::transformMatrix(stringstream& stream)
 		CONSTANT_ELSE = sqrt(2 / N);
 	}
 	vector<int> colWidth(N);
-	C = vector<vector<int>>(N, colWidth);
+	C = vector<vector<int>>(N, colWidth); //Set transform matrix dimensions
 	initialize();
 }
 
+// Set matrix to zeroes
 void transformMatrix::initialize()
 {
 	row = C.begin();

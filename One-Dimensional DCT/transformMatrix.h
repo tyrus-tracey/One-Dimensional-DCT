@@ -11,10 +11,11 @@ class transformMatrix
 {
 public:
 	transformMatrix(stringstream& stream);
-	void initialize();
 	void print();
 
 private:
+	void initialize();
+
 	int N;
 	double CONSTANT_ZERO;
 	double CONSTANT_ELSE;
