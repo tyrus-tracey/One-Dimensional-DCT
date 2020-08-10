@@ -10,6 +10,7 @@ int main()
     while (running) {
         std::cout << "Enter up to 10 integers. X to close:\n";
         std::getline(std::cin, inputString);
+
         if (inputString != "X" && inputString != "x") {
             std::stringstream inputStream(inputString);
             transformMatrix mat(inputStream);

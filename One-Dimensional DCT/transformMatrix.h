@@ -1,6 +1,6 @@
 #pragma once
 #include <sstream>
-#include <math.h>
+#include <cmath>
 #include <vector>
 #include <iostream>
 #include <iomanip>
@@ -14,15 +14,19 @@ public:
 	void print();
 
 private:
-	void initialize();
+	void generateMatrix();
+	void generateDCT();
+	void round();
 
 	int N;
-	double CONSTANT_ZERO;
-	double CONSTANT_ELSE;
-	vector<vector<int>> C; //transform matrix
-	vector<int> input;
+	double a_ZERO;
+	double a_ELSE;
+	const double PI = 3.14159265358979323846;
+	vector<vector<double>> C; //C(i,j) matrix
+	vector<double> F; // 1D Transform output
+	vector<double> input;
 
-	vector<vector<int>>::iterator row;
-	vector<int>::iterator col;
+	vector<vector<double>>::iterator row;
+	vector<double>::iterator col;
 };
 
